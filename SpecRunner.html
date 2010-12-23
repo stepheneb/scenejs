@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Test Runner</title>
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.1/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine-1.0.1/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-1.0.1/jasmine-html.js"></script>
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="src/scenejs/core/core.js"></script>
+  <script type="text/javascript" src="src/scenejs/core/service.js"></script>
+  <script type="text/javascript" src="src/scenejs/core/withNode.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/services/commandService.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/debug/debugModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/exceptions/exceptions.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/core/math.js"></script>
+  <script type="text/javascript" src="src/scenejs/core/webgl.js"></script>
+  <script type="text/javascript" src="src/scenejs/core/webgl-trace.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/node/node.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/events/eventsModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/logging/loggingModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/errors/errorsModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/time/timeModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/node/layerModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/memory/memoryModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/instancing/instancingModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/instancing/library.js"></script>
+  <script type="text/javascript" src="src/scenejs/instancing/instance.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/selector/selector.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/processes/processModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/scene/sceneModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/scene/scene.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/shading/renderModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/renderer/rendererConfigModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/renderer/renderer.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/flags/flagsModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/flags/flags.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/geometry/geometryModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/geometry/geometry.js"></script>
+  <script type="text/javascript" src="src/scenejs/geometry/objects/teapot.js"></script>
+  <script type="text/javascript" src="src/scenejs/geometry/objects/box.js"></script>
+  <script type="text/javascript" src="src/scenejs/geometry/objects/sphere.js"></script>
+  <script type="text/javascript" src="src/scenejs/geometry/objects/quad.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/text/vectorTextModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/text/bitmapTextModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/text/text.js"></script>
+
+
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/viewTransformModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/modelTransformModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/modelViewTransformModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/rotate.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/translate.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/scale.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/matrix.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/quaternion.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/lookAt.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/stationary.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/billboard.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/modelView/inverse.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/transformation/camera/projectionModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/transformation/camera/camera.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/lighting/lightingModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/lighting/light.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/material/materialModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/material/material.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/colortrans/colortrans.js"></script>
+  <script type="text/javascript" src="src/scenejs/colortrans/colortransModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/interpolation/interpolator.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/boundary/viewFrustumModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/boundary/viewLocalityModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/boundary/boundingBox.js"></script>
+  <script type="text/javascript" src="src/scenejs/boundary/boundaryModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/boundary/locality.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/texture/textureModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/texture/textureLayer.js"></script>
+  <script type="text/javascript" src="src/scenejs/texture/texture.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/fog/fogModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/fog/fog.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/clip/clipModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/clip/clip.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/deform/deformModule.js"></script>
+  <script type="text/javascript" src="src/scenejs/deform/deform.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/pick/pickModule.js"></script>
+
+  <script type="text/javascript" src="src/scenejs/imagebuf/imageBuf.js"></script>
+  <script type="text/javascript" src="src/scenejs/imagebuf/imageBufModule.js"></script>
+
+  <script type="text/javascript" src="src/plugins/lookAt/lookAtService.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="spec/SpecHelper.js"></script>
+  <script type="text/javascript" src="spec/lookAtSpec.js"></script>
+
+</head>
+<body>
+
+  <div id="container">
+    <div id="header">
+      <div id="header-nav"></div>
+      <div id="header-inner">
+        <h1><a href="http://scenejs.org">SceneJS</a></h1>
+      </div>
+    </div>
+    <div id="content">
+      <h3><a onclick="toggleDiv('theCanvas')">Canvas</a></h3>
+      <canvas id="theCanvas" width="600" height="400" style="display:none">
+        <p>This example requires a browser that supports the
+          <a href="http://www.w3.org/html/wg/html5/">HTML5</a>
+          &lt;canvas&gt; feature.</p>
+      </canvas>
+    </div>
+
+    <div id="log">
+      <h3><a onclick="toggleDiv('theLoggingDiv')">Log</a></h3>
+      <div id="theLoggingDiv" style="display:none"></div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    
+    function toggleDiv(id) {
+      var div = document.getElementById(id);
+      if (div.style.display == "none") {
+        div.style.display = "";
+      } else {
+        div.style.display = "none";
+      }
+      return true;
+    };
+    
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().execute();
+  </script>
+
+</body>
+</html>
